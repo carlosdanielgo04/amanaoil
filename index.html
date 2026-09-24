@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0b0c">
+
+    <title>AMANAOIL | Tarjeta Digital</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f2f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            color: #111111;
+            display: flex;
+            justify-content: center;
+            padding: 20px 14px;
+        }
+
+        .phone {
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 8px 22px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+
+        .brand-mark {
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .menu {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .profile {
+            background: white;
+            border-radius: 30px;
+            padding: 30px 22px 25px;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+        }
+
+        .photo {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #e8e8eb;
+            margin-bottom: 18px;
+        }
+
+        .name {
+            font-size: 28px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            font-weight: 750;
+        }
+
+        .role {
+            margin-top: 8px;
+            color: #77777d;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .company {
+            margin-top: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #111111;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            border: none;
+            border-radius: 15px;
+            padding: 14px 10px;
+            font-size: 14px;
+            font-weight: 650;
+            cursor: pointer;
+        }
+
+        .primary-button {
+            background: #111111;
+            color: white;
+        }
+
+        .secondary-button {
+            background: #f0f0f2;
+            color: #111111;
+        }
+
+        .section {
+            margin-top: 14px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            padding: 20px 20px 10px;
+            color: #88888e;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 17px 20px;
+            text-decoration: none;
+            color: #111111;
+            border-top: 1px solid #eeeeef;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 13px;
+            background: #f1f1f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+
+        .link-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .link-title {
+            font-size: 14px;
+            font-weight: 650;
+        }
+
+        .link-value {
+            color: #85858b;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .arrow {
+            color: #a0a0a5;
+            font-size: 19px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px 0 15px;
+            color: #99999f;
+            font-size: 11px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            body {
+                background: #000000;
+                color: white;
+            }
+
+            .profile,
+            .section,
+            .menu {
+                background: #1c1c1e;
+            }
+
+            .name,
+            .company,
+            .contact-link {
+                color: white;
+            }
+
+            .role,
+            .link-value {
+                color: #98989f;
+            }
+
+            .contact-link {
+                border-color: #2c2c2e;
+            }
+
+            .icon,
+            .secondary-button {
+                background: #2c2c2e;
+                color: white;
+            }
+
+            .brand-mark {
+                background: white;
+                color: black;
+            }
+
+            .primary-button {
+                background: white;
+                color: black;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="phone">
+
+        <header class="top-bar">
+
+            <div class="brand">
+                <div class="brand-mark">A</div>
+                AMANAOIL
+            </div>
+
+            <button class="menu">•••</button>
+
+        </header>
+
+
+        <section class="profile">
+
+            <!-- Más adelante cambiaremos esta imagen por la foto real -->
+            <img
+                class="photo"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300"
+                alt="Perfil"
+            >
+
+            <h1 class="name">
+                Eduardo Guzmán Hernández
+            </h1>
+
+            <p class="role">
+                Presidente · Chairman
+            </p>
+
+            <p class="company">
+                AMANAOIL
+            </p>
+
+
+            <div class="actions">
+
+                <button class="primary-button"
+                    onclick="saveContact()">
+                    ＋ Guardar contacto
+                </button>
+
+                <button class="secondary-button"
+                    onclick="shareCard()">
+                    Compartir
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-title">
+                Contacto
+            </div>
+
+
+            <a
+                class="contact-link"
+                href="tel:+00000000000"
+            >
+
+                <div class="icon">☎</div>
+
+                <div class="link-info">
+
+                    <div class="link-title">
+                        Teléfono
+                    </div>
+
+                    <div class="link-value">
+                        +00 000 000 000
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <a
+                class="contact-link"
+                href="mailto:correo@amanaoil.com"
+            >
+
+                <div class="icon">✉</div>
+
+                <div class="link-info">
+
+                    <div class="link-title">
+                        Email
+                    </div>
+
+                    <div class="link-value">
+                        correo@amanaoil.com
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <a
+                class="contact-link"
+                href="#"
+            >
+
+                <div class="icon">⌖</div>
+
+                <div class="link-info">
+
+                    <div class="link-title">
+                        Ubicación
+                    </div>
+
+                    <div class="link-value">
+                        Ubicación de AMANAOIL
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-title">
+                Empresa
+            </div>
+
+
+            <a
+                class="contact-link"
+                href="#"
+            >
+
+                <div class="icon">◎</div>
+
+                <div class="link-info">
+
+                    <div class="link-title">
+                        Sitio web
+                    </div>
+
+                    <div class="link-value">
+                        AMANAOIL
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <div class="footer">
+            AMANAOIL · Tarjeta digital
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function saveContact() {
+
+            const vcard = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Eduardo Guzmán Hernández
+ORG:AMANAOIL
+TITLE:Presidente - Chairman
+TEL:+00000000000
+EMAIL:correo@amanaoil.com
+URL:https://amanaoil.com
+END:VCARD
+`;
+
+            const blob = new Blob(
+                [vcard],
+                { type: "text/vcard" }
+            );
+
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+
+            link.href = url;
+
+            link.download = "Eduardo-Guzman-Hernandez.vcf";
+
+            link.click();
+
+            URL.revokeObjectURL(url);
+        }
+
+
+        async function shareCard() {
+
+            if (navigator.share) {
+
+                await navigator.share({
+
+                    title: "Eduardo Guzmán Hernández",
+
+                    text: "Tarjeta digital AMANAOIL",
+
+                    url: window.location.href
+
+                });
+
+            } else {
+
+                alert(
+                    "Copia el enlace de esta página para compartir la tarjeta."
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
